@@ -15,16 +15,16 @@ const NavBar = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
     const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
     return (
-        <nav className='mt-3 mx-0 md:mx-16 xl:mx-54'>
+        <nav className='mt-3 mx-0 lg:mx-16 xl:mx-54'>
             <div className="flex justify-between lg:justify-around items-center mx-auto object-contain relative ">
-                <Link href="/" className={`ml-3 md:ml-0 ${mobileMenuOpen ? "opacity-0 md:opacity-100" : "opacity-100"}`}>
+                <Link href="/" className={`ml-3 md:ml-0 ${mobileMenuOpen ? "opacity-0 lg:opacity-100" : "opacity-100"}`}>
                     <Image src="Logo+typo.svg" alt='logo' height={20} width={145} className='h-14 w-32 ' />
                 </Link>
                 <ul className="hidden lg:flex gap-10 mt-1 items-center uppercase text-small font-medium text-gray-text">
-                    <li><Link href="/" className='text-gradient'>Home</Link></li>
-                    <li><Link href="/pricing" className='text-gradient'>Pricing</Link></li>
-                    <li><Link href="/about-us" className='text-gradient'>About Us</Link></li>
-                    <li><Link href="/contact" className='text-gradient'>Contact</Link></li>
+                    <li><Link href="/" className='text-gradient-hover'>Home</Link></li>
+                    <li><Link href="/pricing" className='text-gradient-hover'>Pricing</Link></li>
+                    <li><Link href="/about-us" className='text-gradient-hover'>About Us</Link></li>
+                    <li><Link href="/contact" className='text-gradient-hover'>Contact</Link></li>
                 </ul>
                 <div className="relative">
                     <button
@@ -36,8 +36,8 @@ const NavBar = () => {
                             EN
                         </span>
                     </button>
-                    <ul className={`absolute top-7 left-3/4 -translate-x-1/2 bg-white shadow-xl rounded-3xl w-22 py-2 z-50 text-center text-gray-text overflow-hidden transform transition-all duration-300 origin-top 
-                        ${dropdownOpen ? "opacity-0 md:opacity-100 scale-y-100" : "opacity-0 scale-y-0 pointer-events-none"}
+                    <ul className={`absolute top-7 left-3/4 -translate-x-1/2 bg-white shadow-xl rounded-3xl w-26 py-2 z-50 text-center text-gray-text overflow-hidden transform transition-all duration-300 origin-top 
+                        ${dropdownOpen ? "opacity-0 lg:opacity-100 scale-y-100" : "opacity-0 scale-y-0 pointer-events-none"}
                         `}>
                         <li className={dropList}>
                             <button className={dropLink}>
@@ -75,10 +75,10 @@ const NavBar = () => {
                         <div className='absolute top-full left-0 w-full bg-white z-50 shadow-md'>
                             <ul className="flex flex-col items-center text-center gap-4 pb-6 uppercase text-xs font-medium text-gray-text">
                                 <hr className='w-11/12 h-1 text-gray-200' />
-                                <li><Link href="/" className='text-gradient'>Home</Link></li>
-                                <li><Link href="/pricing" className='text-gradient'>Pricing</Link></li>
-                                <li><Link href="/about-us" className='text-gradient'>About Us</Link></li>
-                                <li><Link href="/contact" className='text-gradient'>Contact</Link></li>
+                                <li><Link href="/" className='text-gradient-hover'>Home</Link></li>
+                                <li><Link href="/pricing" className='text-gradient-hover'>Pricing</Link></li>
+                                <li><Link href="/about-us" className='text-gradient-hover'>About Us</Link></li>
+                                <li><Link href="/contact" className='text-gradient-hover'>Contact</Link></li>
                                 <hr className='w-11/12 h-1 text-gray-200' />
 
                                 <div className='flex gap-5 mb-1'>
