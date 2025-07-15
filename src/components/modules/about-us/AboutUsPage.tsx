@@ -55,10 +55,13 @@ const AboutUsPage = () => {
                     </h3>
                     <div className="flex flex-row gap-0 justify-center">
                         {/* Mission Item 1 */}
-                        <div className="flex flex-col items-center justify-start text-start border-1 border-gray-100 w-94">
-                            <div className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center rounded-full bg-blue-500 text-white text-2xl font-bold mb-4">
-                                1
-                            </div>
+                        <div className="flex flex-col items-start px-4 pt-4 justify-start text-start border-1 border-gray-100 w-94 h-54">
+                            <Image
+                                src="asset/about-us/1.svg"
+                                alt="Self-Discovery Icon"
+                                width={80}
+                                height={80}
+                            />
                             <p className="text-base md:text-lg text-gray-700">
                                 Deliver the world’s
                                 <br />
@@ -68,10 +71,13 @@ const AboutUsPage = () => {
                             </p>
                         </div>
                         {/* Mission Item 2 */}
-                        <div className="flex flex-col items-center border-1 border-gray-100 w-94 text-start">
-                            <div className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center rounded-full bg-purple-500 text-white text-2xl font-bold mb-4">
-                                2
-                            </div>
+                        <div className="flex flex-col items-start px-4 pt-4 justify-start text-start border-1 border-gray-100 w-94 h-54">
+                            <Image
+                                src="asset/about-us/2.svg"
+                                alt="Self-Discovery Icon"
+                                width={80}
+                                height={80}
+                            />
                             <p className="text-base md:text-lg text-gray-700">
                                 Discover your personalized
                                 <br />
@@ -81,10 +87,13 @@ const AboutUsPage = () => {
                             </p>
                         </div>
                         {/* Mission Item 3 */}
-                        <div className="flex flex-col items-center border-1 border-gray-100 w-94 text-start">
-                            <div className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center rounded-full bg-red-500 text-white text-2xl font-bold mb-4">
-                                3
-                            </div>
+                        <div className="flex flex-col items-start px-4 pt-4 justify-start text-start border-1 border-gray-100 w-94 h-54">
+                            <Image
+                                src="asset/about-us/3.svg"
+                                alt="Self-Discovery Icon"
+                                width={80}
+                                height={80}
+                            />
                             <p className="text-base md:text-lg text-gray-700">
                                 Future proof your education
                                 <br />

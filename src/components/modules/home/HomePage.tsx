@@ -1,6 +1,8 @@
 
 import Image from 'next/image';
 import React from 'react';
+import AnimateTestButton from '@elements/AnimateTestButton';
+import HoverImageFade from '@elements/HoverImageFade';
 
 const partner = "grayscale h-auto";
 
@@ -48,9 +50,10 @@ const HomePage: React.FC = () => {
                 </div>
                 <div className="space-y-6 flex flex-col justify-end items-center">
                     <div className='flex flex-col justify-center items-center mt-24 mb-10 z-40 w-full '>
-                        <button className="bg-[linear-gradient(-8deg,#3b82f6_0%,#ef4444_60%)] text-white w-full max-w-[260px] text-xs sm:text-base md:text-base py-2 px-5 whitespace-nowrap rounded-full font-normal hover:bg-red-700 transition-color shadow-lg uppercase">
+                        {/* <button className="bg-[linear-gradient(-8deg,#3b82f6_0%,#ef4444_60%)] text-white w-full max-w-[260px] text-xs sm:text-base md:text-base py-2 px-5 whitespace-nowrap rounded-full font-normal hover:bg-red-700 transition-color shadow-lg uppercase">
                             take the test
-                        </button>
+                        </button> */}
+                        <AnimateTestButton />
                         <p className='text-[10px]'>You won’t be charged until you confirm</p>
                     </div>
                     <div className='flex justify-evenly items-center xl:px-30 z-40 w-full'>
@@ -64,112 +67,192 @@ const HomePage: React.FC = () => {
 
             {/* Intro Section */}
             <section className="bg-gradient-to-r from-purple-900 to-red-800 text-white py-8 md:py-12 lg:py-16">
-                <div className="container mx-auto px-4 text-center">
-                    <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-4">
-                        Discover Your Unique Career Journey with AI
+                <div className="container mx-auto px-4 text-center flex flex-col items-center">
+                    <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-4 rounded-full bg-red-400 px-4 py-2 w-fit">
+                        Serious About Your Future ?
                     </h2>
-                    <p className="text-base md:text-lg max-w-4xl mx-auto">
-                        Career Lab AI combines the world’s most scientifically validated assessments
-                        with cutting-edge AI technology to provide you with personalized career insights
-                        and a clear roadmap for your future.
+                    <p className='font-semibold text-sm md:text-base lg:text-lg w-full'>
+                        Unvalidated career tests are scamming and misleading the futures of millions of people worldwide!
+                    </p>
+                    <p className="text-normal md:text-base max-w-4xl mx-auto">
+                        Free online career tests recycle and generate generic results across. Relying on them can damage your confidence, lead to poor career decisions, and cause you to second-guess your true potential.
                     </p>
                 </div>
             </section>
 
-            {/* Built on Talents Section */}
-            <section className="py-12 md:py-16 lg:py-20 bg-white">
-                <div className="container mx-auto px-4">
-                    <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">
-                        Built on <span className="text-red-600">Talents</span>
+            <section className="bg-white w-full mb-15">
+                <div className='py-12 mx-auto w-3/4'>
+                    <h2 className="text-3xl md:text-4xl font-bold text-start mb-2 font-grotesk">
+                        Our Happy <span className="text-red-600 text-6xl">Talents</span>
                     </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-                        {/* Graph Image */}
-                        <div className="md:col-span-2 lg:col-span-1 flex justify-center items-center">
-                            <Image
-                                src="/talent-graph.png" // Placeholder
-                                alt="Talent Graph"
-                                width={250}
-                                height={250}
-                                objectFit="contain"
-                            />
-                        </div>
-                        {/* Talent Items */}
-                        <div className="md:col-span-2 lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                            {['Social', 'Artistic', 'Enterprising', 'Conventional', 'Investigative', 'Realistic', 'Data Driven', 'People Centric', 'Visionary', 'Analytical', 'Creative', 'Practical'].map((talent, index) => (
-                                <div key={index} className="flex items-center space-x-3 bg-gray-50 p-3 rounded-lg shadow-sm">
-                                    <span className="text-red-600 text-lg font-bold">●</span>
-                                    <p className="text-gray-700 text-base">{talent}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                    <div className="flex flex-wrap justify-center gap-6 mt-8">
-                        <Image
-                            src="asset/home/Property-1Default.svg" // Placeholder
+                    <p className='text-sm'>
+                        As Thailand’s only certified provider of Pearson Clinical Career Assessments – the Which Career For Me (MOTIVA) and the Career Assessment Inventory (CAI) – we are on a bold mission to empower <span className='text-red-500'>1,000,000 talents</span> from age 8 to thrive in careers in a world driven by AI.
+                    </p>
+                </div>
+                <div className="relative flex gap-4 mt-0 w-full justify-end items-center">
+                    <p className='origin-center -rotate-90 text-nowrap w-64 '>
+                        “Choose purpose over pressure and<br />
+                        happiness alongside achievement.”
+                    </p>
+                    <div className="flex flex-wrap justify-center gap-4 mt-8">
+                        <HoverImageFade
+                            defaultSrc="asset/home/Property-2Default.svg"
+                            hoverSrc="/asset/home/Property-2Variant.svg"
                             alt="Student 1"
-                            width={200}
-                            height={200}
-                            objectFit="cover"
-                            className="rounded-lg shadow-md"
+                            width={350}
+                            height={500}
+                            className="rounded-lg"
                         />
-                        <Image
-                            src="asset/home/Property-1Default.svg" // Placeholder
+                        <HoverImageFade
+                            defaultSrc="asset/home/Property-1Default.svg"
+                            hoverSrc="/asset/home/Property-1Variant.svg"
                             alt="Student 2"
-                            width={200}
-                            height={200}
-                            objectFit="cover"
-                            className="rounded-lg shadow-md"
+                            width={350}
+                            height={500}
+                            className="rounded-lg hidden lg:flex"
                         />
-                        <Image
-                            src="asset/home/Property-1Default.svg" // Placeholder
+                        <HoverImageFade
+                            defaultSrc="asset/home/Property-2Default.svg"
+                            hoverSrc="/asset/home/Property-2Variant.svg"
                             alt="Student 3"
-                            width={200}
-                            height={200}
-                            objectFit="cover"
-                            className="rounded-lg shadow-md"
+                            width={350}
+                            height={500}
+                            className="rounded-lg hidden xl:flex"
                         />
-                        <Image
-                            src="asset/home/Property-1Default.svg" // Placeholder
+                        <HoverImageFade
+                            defaultSrc="asset/home/Property-1Default.svg"
+                            hoverSrc="/asset/home/Property-1Variant.svg"
                             alt="Student 4"
-                            width={200}
-                            height={200}
-                            objectFit="cover"
-                            className="rounded-lg shadow-md"
+                            width={350}
+                            height={500}
+                            className="rounded-lg hidden 2xl:flex"
                         />
                     </div>
                 </div>
             </section>
 
             {/* World's Best Career Test Section */}
-            <section className="py-12 md:py-16 lg:py-20 bg-gray-50">
+            <section className="py-12 md:py-16 lg:py-20 bg-gray-100">
                 <div className="container mx-auto px-4 text-center">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                        World’s Best <span className="text-red-600">Career Test</span>
-                    </h2>
-                    <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-10">
-                        Backed by 40+ years of science and 5 million users worldwide.
+                    <div className='mb-8'>
+                        <h2 className="text-3xl md:text-4xl font-bold">
+                            World’s Best <span className="text-red-600">Career Test</span>
+                        </h2>
+                        <p className='text-sm'>
+                            Career Planning Made Easy🚀
+                        </p>
+                    </div>
+                    <p className="text-xs md:text-sm text-gray-600 max-w-5xl mx-auto mb-10">
+                        Which Career For Me (MOTIVA) is the world’s best all-in-one career test and interactive planner – trusted worldwide by psychologists,
+                        <br />
+                        Fortune 500 companies, universities, schools, career counselors, educators, government authorities and leading HR firms:
                     </p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <div className="bg-red-600 text-white p-6 rounded-2xl shadow-lg flex flex-col items-center">
-                            <h3 className="text-2xl md:text-3xl font-bold mb-2">93%</h3>
-                            <p className="text-base md:text-lg">Of users are happy with their test results.</p>
+                </div>
+                <div className='flex flex-col lg:flex-row xl:mx-60'>
+                    <p className='bg-red-400 text-white pt-6 pb-16 px-6 rounded-lg w-fit mx-auto mb-8 origin-center rotate-10'>
+                        It’s psychometrically
+                        <br />
+                        designed and scientifically
+                        <br />
+                        tested to future-proof you
+                        <br />
+                        to succeed happily in a word
+                        <br />
+                        driven by AI and other
+                        <br />
+                        disruptions.
+                    </p>
+                    <p className='bg-red-400 text-white pt-6 pb-16 px-6 rounded-lg w-fit mx-auto mb-8 origin-center -rotate-10'>
+                        It’s psychometrically
+                        <br />
+                        designed and scientifically
+                        <br />
+                        tested to future-proof you
+                        <br />
+                        to succeed happily in a word
+                        <br />
+                        driven by AI and other
+                        <br />
+                        disruptions.
+                    </p>
+                    <p className='bg-red-400 text-white pt-6 pb-16 px-6 rounded-lg w-fit mx-auto mb-8 origin-center rotate-10'>
+                        It’s psychometrically
+                        <br />
+                        designed and scientifically
+                        <br />
+                        tested to future-proof you
+                        <br />
+                        to succeed happily in a word
+                        <br />
+                        driven by AI and other
+                        <br />
+                        disruptions.
+                    </p>
+                    <p className='bg-red-400 text-white pt-6 pb-16 px-6 rounded-lg w-fit mx-auto mb-8 origin-center -rotate-10'>
+                        It’s psychometrically
+                        <br />
+                        designed and scientifically
+                        <br />
+                        tested to future-proof you
+                        <br />
+                        to succeed happily in a word
+                        <br />
+                        driven by AI and other
+                        <br />
+                        disruptions.
+                    </p>
+                </div>
+                <div className='mx-30'>
+                    <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-2 text-gray-800">
+                        <div className="flex flex-col items-start justify-center bg-gray-200 h-30 p-3">
+                            <span className="text-2xl md:text-4xl font-bold text-gray-800">30+ Million</span>
+                            <span className="text-sm md:text-base text-gray-600 mt-2">times administrated worldwide</span>
                         </div>
-                        <div className="bg-purple-600 text-white p-6 rounded-2xl shadow-lg flex flex-col items-center">
-                            <h3 className="text-2xl md:text-3xl font-bold mb-2">350+</h3>
-                            <p className="text-base md:text-lg">Majors / Careers to discover.</p>
+                        <div className="flex flex-col items-start justify-center bg-gray-200 h-30 p-3">
+                            <span className="text-2xl md:text-4xl font-bold text-gray-800">5,000+</span>
+                            <span className="text-sm md:text-base text-gray-600 mt-2">career-guide websites connected</span>
                         </div>
-                        <div className="bg-blue-600 text-white p-6 rounded-2xl shadow-lg flex flex-col items-center">
-                            <h3 className="text-2xl md:text-3xl font-bold mb-2">40+</h3>
-                            <p className="text-base md:text-lg">Years of science validated.</p>
-                        </div>
-                        <div className="bg-pink-600 text-white p-6 rounded-2xl shadow-lg flex flex-col items-center">
-                            <h3 className="text-2xl md:text-3xl font-bold mb-2">5M+</h3>
-                            <p className="text-base md:text-lg">Users worldwide.</p>
+                        <div className="flex flex-col items-start justify-center bg-gray-200 h-30 p-3">
+                            <span className="text-2xl md:text-4xl font-bold text-gray-800">2,600+</span>
+                            <span className="text-sm md:text-base text-gray-600 mt-2">occupations constantly updated in the live planner</span>
                         </div>
                     </div>
-                    <button className="mt-12 bg-red-600 text-white py-3 px-8 rounded-full text-lg font-semibold hover:bg-red-700 transition-colors shadow-lg">
-                        Unlock My Career
-                    </button>
+
+                    {/* Short Info Section */}
+                    <div className="mt-2 grid grid-cols-1 md:grid-cols-3 gap-2 text-gray-700 ">
+                        <div className="flex flex-col items-start justify-center text-center bg-gray-200 h-30 p-3">
+                            <p className="text-lg md:text-xl font-bold text-gray-800">Instant</p>
+                            <p className="text-sm md:text-base text-gray-600">Personalized results with 1-year access</p>
+                        </div>
+                        <div className="flex flex-col items-start justify-center text-center bg-gray-200 h-30 p-3">
+                            <p className="text-lg md:text-xl font-bold text-gray-800">25</p>
+                            <p className="text-sm md:text-base text-gray-600">years of psychometrical research and Validation</p>
+                        </div>
+                        <div className="flex flex-col items-start justify-center text-center bg-gray-200 h-30 p-3">
+                            <p className="text-lg md:text-xl font-bold text-gray-800">100%</p>
+                            <p className="text-sm md:text-base text-gray-600">remote, self-paced</p>
+                        </div>
+                        <div className="flex flex-col items-start justify-center text-center bg-gray-200 h-30 p-3">
+                            <p className="text-lg md:text-xl font-bold text-gray-800">10+</p>
+                            <p className="text-sm md:text-base text-gray-600">languages available</p>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Download Sample Report Section */}
+                <div className="mt-20 bg-gray-100 p-8 rounded-lg shadow-inner max-w-2xl mx-auto">
+                    <p className="text-lg md:text-xl font-semibold text-gray-700 mb-6">
+                        Download Sample Report of:
+                    </p>
+                    <div className="flex flex-col sm:flex-row justify-center gap-4">
+                        <button className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full shadow-md transition-colors duration-200">
+                            Which Career For Me
+                        </button>
+                        <span className="text-gray-600 font-semibold flex items-center justify-center">or</span>
+                        <button className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full shadow-md transition-colors duration-200">
+                            CAI
+                        </button>
+                    </div>
                 </div>
             </section>
 
