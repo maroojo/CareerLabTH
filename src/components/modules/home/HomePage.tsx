@@ -7,6 +7,36 @@ import HoverImageFade from '@elements/HoverImageFade';
 const partner = "grayscale h-auto";
 
 const HomePage: React.FC = () => {
+    const textGradientStyle = {
+        background: 'linear-gradient(to right, #E02E50, #6C4AB4)',
+        WebkitBackgroundClip: 'text',
+        WebkitTextFillColor: 'transparent',
+        backgroundClip: 'text',
+        color: 'transparent',
+    };
+
+    const insightsData = [
+        {
+            title: "Your Top 30+ Career Matches",
+            description: "Get your 30+ ultra-precise career matches from a live database of 2,600+ AI-proof careers.",
+        },
+        {
+            title: "Your Current and Potential Strengths",
+            description: "Identify both your natural talents and hidden strengths you can develop to stand competitive.",
+        },
+        {
+            title: "Your Professional Interests and Passions",
+            description: "Gain deep insights into the fields and industries where you will feel energized, motivated and engaged.",
+        },
+        {
+            title: "Your Company Style based on Life Values and Motivations",
+            description: "Find out what type of work environment and company culture align with your personal values for long-term career success and happiness.",
+        },
+        {
+            title: "Your Personal Career Exploration Guide",
+            description: "Explore, choose, and build real-time a career path and skills of the future in an interactive, constantly-updated platform.",
+        },
+    ];
     return (
         <div className="text-gray-800 ">
             <section className="relative pt-22 md:pt-24 lg:pt-24 pb-82 md:pb-12 lg:pb-16 xl:pb-12 overflow-hidden h-fit flex flex-col bg-cover bg-center"
@@ -256,164 +286,64 @@ const HomePage: React.FC = () => {
                 </div>
             </section>
 
-            {/* What You'll Get Section */}
-            <section className="relative py-12 md:py-16 lg:py-20 bg-gradient-to-r from-purple-900 to-red-800 text-white overflow-hidden">
-                <div className="absolute inset-0 opacity-20">
-                    <Image
-                        src="/abstract-background.png" // Placeholder for abstract background
-                        alt="Abstract Background"
-                        layout="fill"
-                        objectFit="cover"
-                    />
-                </div>
-                <div className="container mx-auto px-4 relative z-10">
-                    <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">
-                        What You&apos;ll Get
-                    </h2>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
-                        {/* Left Column */}
-                        <div className="space-y-6">
-                            {[
-                                "Instant, personalized insights based on your unique talents, interests, and skills.",
-                                "Your top 30 matched careers and majors, ranked by compatibility.",
-                                "Detailed descriptions of each matched career and major.",
-                                "Essential skills needed for each career.",
-                                "Projected growth and salary information.",
-                                "Educational pathways and recommended courses.",
-                                "In-depth analysis of your work styles.",
-                                "Personalized learning resources to bridge skill gaps.",
-                            ].map((item, index) => (
-                                <div key={index} className="flex items-start space-x-3">
-                                    <svg className="w-6 h-6 text-yellow-400 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                                    </svg>
-                                    <p className="text-lg">{item}</p>
-                                </div>
-                            ))}
-                        </div>
-                        {/* Right Column */}
-                        <div className="space-y-6">
-                            {[
-                                "Personalized career development plans.",
-                                "Networking opportunities and industry connections.",
-                                "Resume and interview preparation tips.",
-                                "Guidance on building a strong personal brand.",
-                                "Access to exclusive webinars and workshops.",
-                                "Ongoing support from career counselors.",
-                                "Insights into emerging job markets and trends.",
-                                "Strategies for continuous learning and adaptation.",
-                            ].map((item, index) => (
-                                <div key={index} className="flex items-start space-x-3">
-                                    <svg className="w-6 h-6 text-yellow-400 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                                    </svg>
-                                    <p className="text-lg">{item}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                    <div className="flex justify-center mt-12">
-                        <button className="bg-red-600 text-white py-3 px-8 rounded-full text-lg font-semibold hover:bg-red-700 transition-colors shadow-lg">
-                            Get Started Now
-                        </button>
-                    </div>
-                </div>
-            </section>
+            <section className="bg-[#1A1A2E] py-16 px-4 md:px-8 lg:px-16 text-white"> {/* Dark background color from image */}
+                <div className="max-w-6xl mx-auto">
 
-            {/* Instant Personalized Insights Section */}
-            <section className="relative py-12 md:py-16 lg:py-20 bg-gradient-to-r from-purple-900 to-red-800 text-white overflow-hidden">
-                <div className="absolute inset-0 opacity-20">
-                    <Image
-                        src="/insight-background.png" // Placeholder for background image
-                        alt="Insight Background"
-                        layout="fill"
-                        objectFit="cover"
-                    />
-                </div>
-                <div className="container mx-auto px-4 relative z-10">
-                    <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">
-                        Instant Personalized Insights
-                        <br />
-                        You Will Get:
+                    {/* Header Section */}
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-12 text-gray-200">
+                        Instant <div style={textGradientStyle}>Personalized Insights</div> You Will Get:
                     </h2>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                        {/* Left side - text insights */}
-                        <div className="space-y-6">
-                            <div className="p-6 bg-white bg-opacity-10 rounded-2xl backdrop-blur-sm shadow-xl">
-                                <h3 className="text-xl md:text-2xl font-semibold mb-2">
-                                    My Core Interests:
-                                </h3>
-                                <p className="text-base md:text-lg">
-                                    Explore your passions, what truly motivates you, and how they align with various career paths.
-                                </p>
-                            </div>
-                            <div className="p-6 bg-white bg-opacity-10 rounded-2xl backdrop-blur-sm shadow-xl">
-                                <h3 className="text-xl md:text-2xl font-semibold mb-2">
-                                    My Work Styles:
-                                </h3>
-                                <p className="text-base md:text-lg">
-                                    Understand your preferred working environment, communication style, and how you interact with others in a professional setting.
-                                </p>
-                            </div>
-                            <div className="p-6 bg-white bg-opacity-10 rounded-2xl backdrop-blur-sm shadow-xl">
-                                <h3 className="text-xl md:text-2xl font-semibold mb-2">
-                                    My Workplace Values:
-                                </h3>
-                                <p className="text-base md:text-lg">
-                                    Identify what most important to you in a job or company culture, ensuring a fulfilling and sustainable career.
-                                </p>
-                            </div>
-                        </div>
-                        {/* Right side - image */}
-                        <div className="flex justify-center lg:justify-end">
-                            <Image
-                                src="/insight-image.png" // Placeholder for insight image
-                                alt="Insight Overview"
-                                width={500}
-                                height={500}
-                                objectFit="contain"
-                                className="rounded-3xl shadow-2xl"
-                            />
-                        </div>
-                    </div>
-                    <div className="flex justify-center mt-12">
-                        <button className="bg-red-600 text-white py-3 px-8 rounded-full text-lg font-semibold hover:bg-red-700 transition-colors shadow-lg">
-                            Unlock My Career Report
-                        </button>
-                    </div>
-                </div>
-            </section>
 
-            {/* Trust Section */}
-            <section className="py-12 md:py-16 lg:py-20 bg-white">
-                <div className="container mx-auto px-4 text-center">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-8 md:mb-12">
-                        Trusted by the world&apos;s
-                        <br />
-                        leading institutions
-                    </h2>
-                    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 justify-items-center items-center">
-                        {[...Array(5)].map((_, i) => (
-                            <Image
-                                key={i}
-                                src={`/logo-${i + 1}.png`} // Placeholder for logos
-                                alt={`Company Logo ${i + 1}`}
-                                width={150}
-                                height={75}
-                                objectFit="contain"
-                            />
+                    {/* Grid for Insights */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative">
+                        {insightsData.map((insight, index) => (
+                            <div
+                                key={index}
+                                className={`
+                bg-[#26263B] p-6 rounded-lg shadow-lg
+                ${index === insightsData.length - 1 ? 'col-span-1 md:col-span-2 lg:col-span-1' : ''}
+                ${index === insightsData.length - 1 ? 'hidden lg:block' : ''} // Hide last box on mobile/tablet if image takes its place
+              `}
+                            >
+                                <h3 className="text-xl md:text-2xl font-bold mb-3" style={textGradientStyle}>
+                                    {insight.title}
+                                </h3>
+                                <p className="text-sm md:text-base text-gray-300 leading-relaxed">
+                                    {insight.description}
+                                </p>
+                            </div>
                         ))}
+                        <div className="
+            relative
+            col-span-1 md:col-span-2 lg:col-span-2 // On desktop, it spans 2 columns
+            row-span-1 md:row-span-1 lg:row-span-2 // On desktop, it spans 2 rows
+            rounded-lg overflow-hidden
+            flex items-center justify-center
+            min-h-[200px] md:min-h-[300px] lg:min-h-[500px] // Minimum height to ensure space
+            lg:block
+          ">
+                            <Image
+                                src="/asset/home/student.svg"
+                                alt="Student with graduation cap"
+                                width={400}
+                                height={400}
+                                objectFit="cover"
+                                quality={100}
+                                className="rounded-lg"
+                            />
+                        </div>
                     </div>
                 </div>
             </section>
 
             {/* FAQ Section */}
             <section className="py-12 md:py-16 lg:py-20 bg-gray-50">
-                <div className="container mx-auto px-4">
-                    <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">
+                <div className="container mx-auto px-4 flex flex-col items-center">
+                    <Image src={"asset/home/video.svg"} alt='video' width={1} height={1} className='w-7/12' />
+                    <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12 mt-20">
                         FAQs
                     </h2>
-                    <div className="max-w-3xl mx-auto space-y-4">
+                    <div className="w-8/12 mx-auto space-y-4">
                         {[
                             "What is Career Lab AI?",
                             "How does Career Lab AI work?",
@@ -444,33 +374,53 @@ const HomePage: React.FC = () => {
                             </div>
                         ))}
                     </div>
-                    <div className="text-center mt-12">
-                        <button className="bg-red-600 text-white py-3 px-8 rounded-full text-lg font-semibold hover:bg-red-700 transition-colors shadow-lg">
-                            View All FAQs
-                        </button>
+                    <div className='my-20'>
+                        <p className="text-xs text-center">As Featured In:</p>
+                        <div className='flex gap-20 items-center mt-4'>
+                            <Image
+                                src="/asset/home/theStandard.svg"
+                                alt="Featured In"
+                                width={200}
+                                height={100}
+                                className="mx-auto mt-4"
+                            />
+                            <Image
+                                src="/asset/home/bangkokPost.svg"
+                                alt="Featured In"
+                                width={200}
+                                height={100}
+                                className="mx-auto mt-4"
+                            />
+                            <Image
+                                src="/asset/home/themomentum.svg"
+                                alt="Featured In"
+                                width={200}
+                                height={100}
+                                className="mx-auto mt-4"
+                            />
+                        </div>
                     </div>
                 </div>
             </section>
 
             {/* Final Call to Action */}
-            <section className="relative py-12 md:py-16 lg:py-20 bg-gradient-to-r from-red-800 to-purple-900 text-white overflow-hidden">
-                <div className="absolute inset-0 opacity-20">
-                    <Image
-                        src="/cta-background.png" // Placeholder for CTA background
-                        alt="CTA Background"
-                        layout="fill"
-                        objectFit="cover"
-                    />
-                </div>
-                <div className="container mx-auto px-4 relative z-10 text-center">
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-                        Ready to Unlock Your Potential?
+            <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-r from-red-800 to-purple-900 text-white overflow-hidden w-8/12 mx-auto rounded-3xl">
+                <div className="container mx-auto px-4 relative z-10 text-center font-grotesk">
+                    <h2 className="">
+                        “In the age of AI,
                     </h2>
-                    <p className="text-lg md:text-xl max-w-2xl mx-auto mb-10">
-                        Take the first step towards a fulfilling career. Discover your true calling today!
-                    </p>
-                    <button className="bg-white text-red-600 py-3 px-8 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg">
-                        Unlock My Career Path
+                    <h2>
+                        the winner isn’t the one who works hardest.
+                    </h2>
+                    <h2>
+                        It’s the one who knows themselves and the world
+                    </h2>
+                    <h2>
+                        and dares to build a life around their true gifts."
+                    </h2>
+
+                    <button className="bg-[linear-gradient(-8deg,#3b82f6_0%,#ef4444_60%)] text-white mt-8 py-2 px-8 rounded-full text-lg font-semibold uppercase">
+                        take A text
                     </button>
                 </div>
             </section>
