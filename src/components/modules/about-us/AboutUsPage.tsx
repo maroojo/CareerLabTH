@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const AboutUsPage = () => {
     return (
-        <div className="font-sans bg-white text-gray-800">
+        <div className="font-sans bg-white text-gray-800 mt-20">
             <div className="container mx-auto px-4 py-8 md:py-16">
                 <h2 className="text-center text-xl md:text-2xl lg:text-3xl font-bold text-gray-700 mb-2 text-gradient">
                     Career Lab Thailand

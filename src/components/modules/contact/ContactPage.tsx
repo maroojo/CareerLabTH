@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const ContactPage = () => {
   return (
-    <div className='mt-8 flex flex-col lg:flex-row xl:h-full'>
+    <div className='mt-20 flex flex-col lg:flex-row xl:h-full'>
       <section className='w-full lg:w-1/2 flex flex-col justify-center items-center lg:justify-start lg:ml-10'>
         <h1 className='mt-5 capitalize text-5xl md:text-6xl lg:text-7xl font-bold font-grotesk max-w-screen-md text-center lg:text-start'>Contact</h1>
         <Image src={'asset/contact/contact.svg'} alt='operator' width={350} height={500} className='mt-10 lg:mt-16 h-auto w-3/4 md:w-8/12 lg:w-7/12 xl:w-5/12' />
