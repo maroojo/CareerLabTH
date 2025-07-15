@@ -7,7 +7,7 @@ const icon = "text-2xl mr-4"
 
 const Footer = () => {
     return (
-        <footer>
+        <footer className='w-full'>
             <div className='flex items-center justify-between my-20'>
                 <Breadcrumb />
             </div>

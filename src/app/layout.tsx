@@ -32,9 +32,9 @@ export default function RootLayout({
       <body
         className={`${roboto.variable} ${spaceGrotesk.variable} font-sans antialiased`}
       >
-        <div className="min-h-screen flex flex-col">
+        <div className="relative min-h-screen flex flex-col">
           <NavBar />
-          <main className="flex-grow overflow-hidden">
+          <main className="flex-grow">
             {children}
           </main>
           <Footer />

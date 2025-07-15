@@ -1,16 +1,17 @@
 import React from "react";
 import Image from "next/image";
+import PricingTable from "./PricingTable";
 
 const PricingPage = () => {
   return (
-    <div className="mt-8 flex flex-col">
-      <section className="flex flex-col items-center mx-3 justify-stretch">
+    <div className="mt-20 flex flex-col mx-60">
+      <section className="flex flex-col items-center mx-3 mb-10 justify-stretch">
         <h1 className="text-3xl font-bold mb-4 font-grotesk">Pricing</h1>
         <h3 className="flex text-center text-sm">
           Charged only after confirmation. No hidden fees. One-time payment.
         </h3>
       </section>
-      <section className="flex justify-evenly items-start gap-1">
+      <section className="flex justify-end items-start gap-3">
         <div className="flex flex-col justify-center text-center w-64">
           <h3 className="text-lg font-semibold font-grotesk mb-2">Popular</h3>
           <div className="flex justify-center mb-2">
@@ -34,7 +35,7 @@ const PricingPage = () => {
             Purchase
           </button>
         </div>
-        <div className="flex flex-col justify-center text-center">
+        <div className="flex flex-col justify-center text-center w-64">
           <h3 className="text-lg font-semibold font-grotesk mb-2">
             Best-Seller
           </h3>
@@ -58,7 +59,7 @@ const PricingPage = () => {
             Purchase
           </button>
         </div>
-        <div className="flex flex-col justify-center">
+        <div className="flex flex-col justify-center w-64">
           <h3 className="text-lg font-semibold font-grotesk mb-2 opacity-0">
             Maximum
           </h3>
@@ -83,6 +84,9 @@ const PricingPage = () => {
           </button>
         </div>
       </section>
+
+      {/* Features Section - Use PricingTable component here */}
+      <PricingTable />
     </div>
   );
 };

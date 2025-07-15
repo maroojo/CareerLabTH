@@ -15,7 +15,9 @@ const NavBar = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
     const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
     return (
-        <nav className='mt-3 mx-0 lg:mx-16 xl:mx-54'>
+        <nav className={`pt-3 mx-0 lg:px-16 xl:px-32 2xl:px-40 z-50 bg-transparent absolute w-full max-w-screen
+        ${mobileMenuOpen ? "bg-white" : "bg-transparent"}
+        `}>
             <div className="flex justify-between lg:justify-around items-center mx-auto object-contain relative ">
                 <Link href="/" className={`ml-3 md:ml-0 ${mobileMenuOpen ? "opacity-0 lg:opacity-100" : "opacity-100"}`}>
                     <Image src="Logo+typo.svg" alt='logo' height={20} width={145} className='h-14 w-32 ' />
@@ -67,7 +69,7 @@ const NavBar = () => {
                 </div>
 
 
-                <div className="lg:hidden mr-3 md:mr-0">
+                <div className="lg:hidden mr-3">
                     <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
                         {mobileMenuOpen ? <Image src={"asset/close.svg"} alt='flag' height={35} width={35} /> : <Image src={"asset/menu.svg"} alt='flag' height={35} width={35} />}
                     </button>
