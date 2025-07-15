@@ -3,7 +3,7 @@
 
 import React, { useState } from 'react';
 
-const AnimatedTestButton = () => {
+const AnimatedTestButton = ({ text }: { text: string }) => {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
@@ -26,17 +26,16 @@ const AnimatedTestButton = () => {
           ${isHovered ? 'translate-x-8 opacity-0' : 'translate-x-0 opacity-100'}
         `}
             >
-                take the test
+                {text}
             </button>
 
-            {/* Hovered Button (Color Swapped) and Arrow Button */}
             <div
                 className={`
           absolute top-0 left-0
           w-full h-full max-w-[300px]
           flex items-center justify-center
           transition-transform duration-800 ease-in-out
-          ${isHovered ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}
+          ${isHovered ? 'translate-x-0 opacity-100' : 'translate-x-6 opacity-0'}
         `}
             >
                 <button
@@ -53,7 +52,7 @@ const AnimatedTestButton = () => {
                         backgroundImage: 'linear-gradient(-8deg, #3b82f6 0%, #ef4444 60%)'
                     }}
                 >
-                    take the test
+                    {text}
                 </button>
 
                 {/* Arrow Button */}

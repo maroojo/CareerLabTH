@@ -83,7 +83,7 @@ const HomePage: React.FC = () => {
                         {/* <button className="bg-[linear-gradient(-8deg,#3b82f6_0%,#ef4444_60%)] text-white w-full max-w-[260px] text-xs sm:text-base md:text-base py-2 px-5 whitespace-nowrap rounded-full font-normal hover:bg-red-700 transition-color shadow-lg uppercase">
                             take the test
                         </button> */}
-                        <AnimateTestButton />
+                        <AnimateTestButton text='take the test' />
                         <p className='text-[10px]'>You won’t be charged until you confirm</p>
                     </div>
                     <div className='flex justify-evenly items-center xl:px-30 z-40 w-full'>
@@ -270,18 +270,14 @@ const HomePage: React.FC = () => {
                 </div>
 
                 {/* Download Sample Report Section */}
-                <div className="mt-20 bg-gray-100 p-8 rounded-lg shadow-inner max-w-2xl mx-auto">
-                    <p className="text-lg md:text-xl font-semibold text-gray-700 mb-6">
+                <div className="mt-20 bg-red-950 p-8 rounded-lg shadow-inner max-w-2xl mx-auto">
+                    <p className="text-lg md:text-xl font-semibold text-center text-gray-300 mb-6">
                         Download Sample Report of:
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center gap-4">
-                        <button className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full shadow-md transition-colors duration-200">
-                            Which Career For Me
-                        </button>
+                        <AnimateTestButton text='Which Career For Me' />
                         <span className="text-gray-600 font-semibold flex items-center justify-center">or</span>
-                        <button className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full shadow-md transition-colors duration-200">
-                            CAI
-                        </button>
+                        <AnimateTestButton text='CAI' />
                     </div>
                 </div>
             </section>
@@ -416,12 +412,11 @@ const HomePage: React.FC = () => {
                         It’s the one who knows themselves and the world
                     </h2>
                     <h2>
-                        and dares to build a life around their true gifts."
+                        and dares to build a life around their true gifts.“
                     </h2>
-
-                    <button className="bg-[linear-gradient(-8deg,#3b82f6_0%,#ef4444_60%)] text-white mt-8 py-2 px-8 rounded-full text-lg font-semibold uppercase">
-                        take A text
-                    </button>
+                    <div className='flex justify-center items-center mt-8'>
+                    <AnimateTestButton text='take A text' />
+                    </div>
                 </div>
             </section>
         </div>
